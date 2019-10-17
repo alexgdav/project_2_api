@@ -7,8 +7,7 @@ curl "https://young-reef-92206.herokuapp.com/questions" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "question": {
-      "phrase": "'"${PHRASE}"'",
-      "user_id": "'"${ID}"'"
+      "phrase": "'"${PHRASE}"'"
     }
   }'
 

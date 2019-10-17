@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
-class QuestionsController < ApplicationController
+class QuestionsController < ProtectedController
   before_action :set_question, only: %i[show update destroy]
 
   # GET /questions
   def index
-    @questions = Question.all
+
+    @questions = current_user.questions
 
     render json: @questions
   end
@@ -17,7 +18,7 @@ class QuestionsController < ApplicationController
 
   # POST /questions
   def create
-    @question = Question.new(question_params)
+    @question = current_user.questions.build(question_params)
 
     if @question.save
       render json: @question, status: :created, location: @question
@@ -44,7 +45,7 @@ class QuestionsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_question
-    @question = Question.find(params[:id])
+    @question = current_user.questions.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
