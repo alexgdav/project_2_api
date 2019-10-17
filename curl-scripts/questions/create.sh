@@ -8,7 +8,7 @@ curl "https://young-reef-92206.herokuapp.com/questions" \
   --data '{
     "question": {
       "phrase": "'"${PHRASE}"'",
-      "user_id": "'"${UID}"'"
+      "user_id": "'"${ID}"'"
     }
   }'
 
