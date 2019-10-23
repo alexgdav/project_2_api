@@ -9,6 +9,10 @@ This particular Oracle has had enough quite enough of that, thank you. It's hear
 too many questions, given too many answers, and all the answers it has left are
 irreverent, irrelevant, and, most importantly, sassy.
 
+Create questions, and store them to a PSQL database table. Retrieve your entries
+via the front-end either one by one or en masse, edit or delete them -- and
+receive messaging from the Oracle as you do. 
+
 Don't expect the meaning of life, the universe, and everything, but you might
 walk away with a laugh. And don't forget to say, "uhh, thanks, I think"!
 
